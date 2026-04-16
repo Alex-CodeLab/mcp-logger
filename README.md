@@ -102,7 +102,14 @@ logger.info("Works like standard logging!")
 
 ## Database
 
-Default location: `~/.lxer/logs.db`
+Each repo/project gets its own database:
+```
+~/.config/mcp-logger/{repo_name}/db
+```
+
+For example:
+- `getLogger("my-project")` → `~/.config/mcp-logger/my-project/db`
+- `log_read repo="my-project"` → reads from `~/.config/mcp-logger/my-project/db`
 
 Schema:
 ```sql
