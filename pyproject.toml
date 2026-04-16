@@ -1,0 +1,20 @@
+[project]
+name = "mcp-logger"
+version = "0.1.0"
+description = "MCP logging service with SQLite backend"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "sqlite-utils>=3.35",
+]
+
+[project.scripts]
+mcp-logger = "mcp_logger.server:run"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
